@@ -1,8 +1,10 @@
+import { component } from "../utils/fc";
+
 type State = {
 	count: number;
 };
 
-export const Counter = () => {
+const _Counter = () => {
 	let initialData: State = {
 		count: 0,
 	};
@@ -22,5 +24,7 @@ export const Counter = () => {
 				</button>
 			);
 		},
-	} as any as FC;
+	};
 };
+
+export const Counter = component(_Counter);
